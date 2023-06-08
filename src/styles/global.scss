@@ -1,27 +1,31 @@
 html {
-  --backgroundColor: #f5f6fa;
+  --backgroundColor: #e4eafb;
   --backgroundDarkColor: #ffffff;
   --color: #161616;
+  --color2: #747474;
   --colorLight: #929292;
   --colorReverse: #ffffff;
   --colorLightReverse: #e7e7e7;
   --transparentColor: rgba(31, 31, 31, 0.9);
   --boxShadow: rgba(0, 0, 0, 0.1);
+  --backgroundColor2: #f6f8ff;
 }
 html[data-theme="dark"] {
   --backgroundColor: #161616;
   --backgroundDarkColor: #242424;
   --color: #f1f1f1;
+  --color2: #b3b3b3;
   --colorLight: #afafaf;
   --colorReverse: black;
   --colorLightReverse: #333333;
   --transparentColor: rgba(26, 26, 26, 0.9);
   --boxShadow: rgba(0, 0, 0, 0.459);
+  --backgroundColor2: #1e1e1e;
 }
 
 :root {
-  --primary: #2a5e59;
-  --primaryDark: #204744;
+  --primary: #db6423;
+  --primaryDark: #bb5016;
   --secondary: #f39971;
   --secondaryDark: #ee8a5f;
 }
@@ -31,7 +35,7 @@ html[data-theme="dark"] {
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--color);
   transition: 10ms cubic-bezier();
 }
@@ -40,7 +44,7 @@ html[data-theme="dark"] {
   height: 5px;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: var(--color);
+  background-color: var(--primary);
   border-radius: 50px;
 }
 *::-webkit-scrollbar-track {

@@ -2,14 +2,15 @@ import {
   TableEntryDeleteButton,
   TableEntryDescription,
   TableEntryEditButton,
-  TableEntryStatus,
+  StatusButton,
   TableEntryText,
   TableEntryViewButton,
+  FilterButton,
 } from "components";
 
 import { Link } from "router";
 import { Search } from "react-feather";
-import Select from "react-select";
+
 import { useLocation } from "react-router-dom";
 
 export default function Employees() {
@@ -29,50 +30,22 @@ export default function Employees() {
             </button>
           </form>
           <div className="container__main__content__listing__header__left__filter">
-            <Select
-              options={[
-                { value: "Department", label: "Department" },
-                { value: "Role", label: "Role" },
-              ]}
-              placeholder="Department"
-              theme={(theme) => ({
-                ...theme,
-                borderRadius: 0,
-                colors: {
-                  ...theme.colors,
-                  primary75: "#2a5e59",
-                  primary25: "#2a5e595e",
-                  primary50: "#2a5e595e",
-                  primary: "#2a5e59",
-                },
-              })}
-            />
-            <Select
-              placeholder="Role"
-              options={[
-                { value: "Role", label: "Role" },
-                { value: "Department", label: "Department" },
-              ]}
-              theme={(theme) => ({
-                ...theme,
-                borderRadius: 0,
-                colors: {
-                  ...theme.colors,
-                  primary75: "#2a5e59",
-                  primary25: "#2a5e595e",
-                  primary50: "#2a5e595e",
-                  primary: "#2a5e59",
-                },
-              })}
-            />
+            <FilterButton to="" text="Pending Projects" />
+            <FilterButton to="" text="Completed Projects" />
           </div>
         </div>
         <div className="container__main__content__listing__header__right">
           <Link
+            to=""
+            className="container__main__content__listing__header__right__button__exp"
+          >
+            Export
+          </Link>
+          <Link
             to={location.pathname.toLowerCase() + "/add"}
             className="container__main__content__listing__header__right__button"
           >
-            Add
+            Add New
           </Link>
         </div>
       </div>
@@ -141,7 +114,7 @@ function TableEntry() {
         <TableEntryEditButton />
         <TableEntryDeleteButton />
       </div>
-      <TableEntryStatus />
+      <StatusButton text="Active" />
       <TableEntryText>john</TableEntryText>
       <TableEntryText>deved</TableEntryText>
       <TableEntryText>+92343323454</TableEntryText>

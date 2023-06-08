@@ -15,6 +15,9 @@
   text-transform: capitalize;
   font-weight: 700;
 }
+.container__main__header__left__icon svg {
+  fill: var(--primary);
+}
 .container__main__header__left__heading {
   font-size: 18px;
 }
@@ -65,7 +68,7 @@
   border-radius: 10px;
   padding: 0.3em 1em;
   min-width: 150px;
-  background-color: var(--backgroundColor);
+  background-color: var(--backgroundColor2);
   cursor: pointer;
   height: 43px;
 }
@@ -118,7 +121,7 @@
   margin-bottom: 0em;
 }
 .container__main__header__right__button {
-  background-color: var(--backgroundColor);
+  background-color: var(--backgroundColor2);
   width: 40px;
   height: 40px;
   border-radius: 50px;

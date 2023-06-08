@@ -22,8 +22,12 @@ const DashboardOrderEntry = lazy(() => import("./DashboardOrderEntry"));
 const DashboardStartEntry = lazy(() => import("./DashboardStartEntry"));
 const OrderDetailsCard = lazy(() => import("./OrderDetailsCard"));
 const OrderProductsCard = lazy(() => import("./OrderProductsCard"));
+const FilterButton = lazy(() => import("./FilterButton"));
+const StatusButton = lazy(() => import("./StatusButton"));
 
 export {
+  StatusButton,
+  FilterButton,
   Header,
   Sidebar,
   ThemeSwitch,

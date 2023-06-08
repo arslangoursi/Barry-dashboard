@@ -43,14 +43,16 @@ export default function Header({ setSidebarOpen }) {
           )
           .map((entry) => (
             <Fragment key={entry.path}>
-              {entry.path === location.pathname.toLowerCase() ? null : (
-                <button
-                  onClick={() => navigate(entry.path ? entry.path : -1)}
-                  className="container__main__header__left__button"
-                >
-                  <ArrowLeft size={20} color="currentColor" />
-                </button>
-              )}
+              {/* {entry.path === location.pathname.toLowerCase() ? null : ( */}
+              <button
+                onClick={() => navigate(entry.path ? entry.path : -1)}
+                className="container__main__header__left__button"
+              >
+                {" "}
+                <ArrowLeft size={20} color="currentColor" />
+              </button>
+              {/* )} */}
+
               <div className="container__main__header__left__icon">
                 {entry.icon}
               </div>
