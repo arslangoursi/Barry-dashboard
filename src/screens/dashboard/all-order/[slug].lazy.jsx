@@ -7,16 +7,17 @@ export default function EmployeeDetails() {
   return (
     <div className="container__main__content__details">
       <div className="container__main__content__details__main">
-        <DetailsEntry label="First Name">John Doe</DetailsEntry>
-        <DetailsEntry label="Last Name">AAsmm</DetailsEntry>
-        <DetailsEntry label="Phone No.">+33-03948567</DetailsEntry>
-        <DetailsEntry label="Email Address">asmm333@gmail.com</DetailsEntry>
-        <DetailsEntry label="Referred By">Irsie</DetailsEntry>
-        <DetailsEntry label="UserName">John Doe</DetailsEntry>
-        <DetailsEntry label="Role">Admin</DetailsEntry>
-        <DetailsEntry label="Status">Active</DetailsEntry>
-        <DetailsEntry label="Password" secure={true}>
-          23904567
+        <DetailsEntry label="Order ID">4534565</DetailsEntry>
+        <DetailsEntry label="Batch Number">323445-234-567</DetailsEntry>
+        <DetailsEntry label="Quantity no.">500KG</DetailsEntry>
+        <DetailsEntry label="Product">Vanilla</DetailsEntry>
+        <DetailsEntry label="Delivery Date ">29 May 2023</DetailsEntry>
+        <DetailsEntry label="Exp Start Date ">29 May 2023</DetailsEntry>
+        <DetailsEntry label="Price">$1234</DetailsEntry>
+        <DetailsEntry label="Customer ID">223334</DetailsEntry>
+        <DetailsEntry label="Note">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.{" "}
         </DetailsEntry>
       </div>
       <div className="container__main__content__details__buttons">
@@ -30,7 +31,7 @@ export default function EmployeeDetails() {
           to={backLocation}
           className="container__main__content__details__buttons__button container__main__content__details__buttons__secondary"
         >
-          Delete
+          Back
         </Link>
       </div>
     </div>

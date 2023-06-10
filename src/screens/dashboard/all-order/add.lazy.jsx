@@ -10,24 +10,40 @@ export default function EmployeeAdd() {
       <div className="container__main__content__details__main container__main__content__details__main__special">
         <div className="container__main__content__details__main__row">
           <div className="container__main__content__details__main__row__entry">
-            <Input type="text" label="Status" placeholder="Enter first name" />
+            <Select
+              label="Status"
+              placeholder="Select Status "
+              options={[
+                { value: "Active", label: "Active" },
+                { value: "Deactive", label: "Deactive" },
+              ]}
+            />
           </div>
           <div className="container__main__content__details__main__row__entry">
-            <Input type="text" label="Last Name" placeholder="Enter status" />
+            <Input
+              type="text"
+              label="Batch Number"
+              placeholder="Enter Batch Number"
+            />
           </div>
         </div>
         <div className="container__main__content__details__main__row">
           <div className="container__main__content__details__main__row__entry">
-            <Input type="text" label="Phone" placeholder="Batch Number" />
+            <Input
+              type="text"
+              label="Quantity"
+              placeholder="Enter vat number"
+            />
           </div>
           <div className="container__main__content__details__main__row__entry">
             <Select
-              label="Select Products"
-              placeholder="select "
+              label=" Products"
+              placeholder="Enter products "
               isMulti
               options={[
-                { value: "Active", label: "Active" },
-                { value: "Deactive", label: "Deactive" },
+                { value: "Vanilla", label: "Vanilla" },
+                { value: "Chocolate", label: "Chocolate" },
+                { value: "Strawberry", label: "Strawberry" },
               ]}
             />
           </div>
@@ -35,30 +51,26 @@ export default function EmployeeAdd() {
 
         <div className="container__main__content__details__main__row">
           <div className="container__main__content__details__main__row__entry">
-            <Input
-              type="text"
-              label="Referred By"
-              placeholder="Enter referred by"
-            />
+            <Input type="text" label="Delivery Date" placeholder="Enter date" />
           </div>
           <div className="container__main__content__details__main__row__entry">
-            <Input type="text" label="Address" placeholder="Enter address" />
+            <Input type="text" label="Price" placeholder="Enter Price" />
           </div>
         </div>
         <div className="container__main__content__details__main__row">
           <div className="container__main__content__details__main__row__entry">
             <Input
               type="text"
-              label="Referred By"
-              placeholder="Enter referred by"
+              label="Exp Start Date"
+              placeholder="Enter date"
             />
           </div>
           <div className="container__main__content__details__main__row__entry">
-            <Input type="text" label="Address" placeholder="Enter address" />
+            <Input type="text" label="Customer ID" placeholder="Enter id" />
           </div>
         </div>
 
-        <Textarea label="Description" placeholder="Enter Description" />
+        <Textarea label="Note" placeholder="Enter Note" />
       </div>
       <div className="container__main__content__details__buttons">
         <Link
@@ -71,7 +83,7 @@ export default function EmployeeAdd() {
           to={backLocation}
           className="container__main__content__details__buttons__button container__main__content__details__buttons__secondary"
         >
-          Discard
+          Back
         </Link>
       </div>
     </div>
