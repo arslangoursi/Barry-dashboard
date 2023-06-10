@@ -24,8 +24,12 @@ const OrderDetailsCard = lazy(() => import("./OrderDetailsCard"));
 const OrderProductsCard = lazy(() => import("./OrderProductsCard"));
 const FilterButton = lazy(() => import("./FilterButton"));
 const StatusButton = lazy(() => import("./StatusButton"));
+const Auth = lazy(() => import("./Auth"));
+const InputPassword = lazy(() => import("./InputPassword"));
 
 export {
+  InputPassword,
+  Auth,
   StatusButton,
   FilterButton,
   Header,
