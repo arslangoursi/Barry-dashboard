@@ -69,7 +69,7 @@ export const sidebarEnteries = [
     ),
     name: "All Orders",
 
-    path: "/dashboard/allorder",
+    path: "/dashboard/all-order",
   },
   {
     category: "Orders",
