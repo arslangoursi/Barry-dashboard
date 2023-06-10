@@ -79,7 +79,8 @@
 }
 .container__main__content__details__buttons__secondary {
   justify-content: center;
-  background-color: var(--secondary);
+  background-color: var(--backgroundColor2);
+  color: var(--color);
 }
 .container__main__content__details__buttons__secondary:hover {
   background-color: var(--secondaryDark);

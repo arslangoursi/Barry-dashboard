@@ -7,6 +7,8 @@ import {
   TableEntryViewButton,
   FilterButton,
 } from "components";
+import { useState } from "react";
+import clsx from "clsx";
 
 import { Link } from "router";
 import { Search } from "react-feather";
@@ -14,6 +16,8 @@ import { Search } from "react-feather";
 import { useLocation } from "react-router-dom";
 
 export default function Employees() {
+  const [selectedTab, setSelectedTab] = useState("All");
+  const tabsList = ["Pending Projects", "Completed Projects"];
   const location = useLocation();
   return (
     <div className="container__main__content__listing">
@@ -30,8 +34,19 @@ export default function Employees() {
             </button>
           </form>
           <div className="container__main__content__listing__header__left__filter">
-            <FilterButton to="" text="Pending Projects" />
-            <FilterButton to="" text="Completed Projects" />
+            {tabsList.map((tab) => (
+              <button
+                key={tab}
+                className={clsx(
+                  "container__main__content__listing__header__right__button__order",
+                  selectedTab === tab &&
+                    "container__main__content__listing__header__right__button__order__active"
+                )}
+                onClick={() => setSelectedTab(tab)}
+              >
+                {tab}
+              </button>
+            ))}
           </div>
         </div>
         <div className="container__main__content__listing__header__right">
@@ -58,29 +73,32 @@ export default function Employees() {
             Status
           </div>
           <div className="container__main__content__listing__table__header__entry">
-            First Name
+            Order ID
           </div>
           <div className="container__main__content__listing__table__header__entry">
-            Last Name
+            Customer ID
           </div>
           <div className="container__main__content__listing__table__header__entry">
-            Phone No.
+            Batch Number
           </div>
           <div className="container__main__content__listing__table__header__entry">
-            Email
+            Quantity
           </div>
           <div className="container__main__content__listing__table__header__entry">
-            Referred By
+            Product
           </div>
           <div className="container__main__content__listing__table__header__entry">
-            Username
+            Delivery Date
           </div>
 
           <div className="container__main__content__listing__table__header__entry">
-            Department
+            Price
           </div>
           <div className="container__main__content__listing__table__header__entry">
-            Role
+            Note
+          </div>
+          <div className="container__main__content__listing__table__header__entry">
+            Exp Start Date
           </div>
         </div>
         <div className="container__main__content__listing__table__content">
@@ -115,23 +133,21 @@ function TableEntry() {
         <TableEntryDeleteButton />
       </div>
       <StatusButton text="Active" />
-      <TableEntryText>john</TableEntryText>
-      <TableEntryText>deved</TableEntryText>
-      <TableEntryText>+92343323454</TableEntryText>
-      <TableEntryText>Abraaa323@gmail.com</TableEntryText>
+      <TableEntryText>23244</TableEntryText>
+      <TableEntryText>78655</TableEntryText>
+      <TableEntryText>432432-343-343</TableEntryText>
+      <TableEntryText>500 KG</TableEntryText>
+      <TableEntryText>Vanilla</TableEntryText>
+      <TableEntryText>23 May 2023</TableEntryText>
+      <TableEntryText>$2300</TableEntryText>
+
       <TableEntryDescription>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor,
         nisl eget ultricies lacinia, nisl nisl aliquam nisl, eu aliquam nisl
         nisl sit amet nisl.
       </TableEntryDescription>
 
-      <TableEntryText>Adbraaaaa</TableEntryText>
-      <TableEntryDescription>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor,
-        nisl eget ultricies lacinia, nisl nisl aliquam nisl, eu aliquam nisl
-        nisl sit amet nisl.
-      </TableEntryDescription>
-      <TableEntryText>Admin</TableEntryText>
+      <TableEntryText>23 May 2023</TableEntryText>
     </div>
   );
 }

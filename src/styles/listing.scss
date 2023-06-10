@@ -90,12 +90,12 @@
   font-size: 12px !important;
 }
 .container__main__content__listing__header__left__filter .css-1im77uy-control {
-  border-radius: 50px;
+  border-radius: 10px;
   padding: 0em 0.5em;
   min-width: 150px;
   margin-right: 1em;
-  background-color: var(--backgroundColor);
-  border-color: transparent !important;
+
+  border: 1px solid #c5c5c5;
   height: 40px;
 }
 .container__main__content__listing__header__left__filter__special
@@ -230,7 +230,7 @@
   align-items: center;
   justify-content: center;
   width: 150px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   word-break: break-all;
   word-wrap: break-word;
@@ -421,7 +421,7 @@
 }
 .container__main__content__listing__table__content__list__entry
   .css-1im77uy-control {
-  background-color: var(--backgroundColor);
+  // background-color: var(--backgroundColor);
   border-radius: 10px;
   border: none;
   width: 100% !important;

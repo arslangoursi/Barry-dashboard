@@ -26,7 +26,7 @@ export default function EmployeeAdd() {
         </div>
         <div className="container__main__content__details__main__row">
           <div className="container__main__content__details__main__row__entry">
-            <Input type="text" label="Phone" placeholder="Enter phone" />
+            <Input type="text" label="Phone" placeholder="Enter Phone no." />
           </div>
           <div className="container__main__content__details__main__row__entry">
             <Input type="text" label="Email" placeholder="Enter email" />
@@ -79,31 +79,12 @@ export default function EmployeeAdd() {
           </div>
           <div className="container__main__content__details__main__row__entry">
             <Select
-              label="Status"
-              placeholder="Select Status"
+              label="Statuss"
+              placeholder="Active"
               options={[
                 { value: "Active", label: "Active" },
                 { value: "Deactive", label: "Deactive" },
               ]}
-            />
-          </div>
-        </div>
-        <div className="container__main__content__details__main__row">
-          <div className="container__main__content__details__main__row__entry">
-            <Input
-              type="password"
-              secure
-              label="Password"
-              placeholder="Enter password"
-              autoComplete="new-password"
-            />
-          </div>
-          <div className="container__main__content__details__main__row__entry">
-            <Input
-              type="password"
-              secure
-              label="Confirm Password"
-              placeholder="Enter confirm password"
             />
           </div>
         </div>

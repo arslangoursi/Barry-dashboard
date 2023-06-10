@@ -310,25 +310,26 @@ body {
   text-align: end;
   padding: 1em 0em;
 }
-.container__main__content__details__buttons__button {
-  // margin: 6px;
-}
+// .container__main__content__details__buttons__button {
+//   // margin: 6px;
+// }
 .container__main__content__listing__header__right__button__order {
-  background-color: var(--backgroundColor);
   color: var(--color);
-  border: none;
-  padding: 0.6em 2em;
-  border-radius: 50px;
+  border: 1px solid var(--color2);
+  padding: 0.8em 2em;
+  border-radius: 10px;
   text-decoration: none;
-  margin: 4px;
+  margin: 0 4px;
+  font-size: 14px;
+  background-color: transparent;
 }
 .container__main__content__listing__header__right__button__order:hover {
-  background-color: var(--primary);
+  background-color: var(--color);
   color: var(--backgroundColor);
 }
 .container__main__content__listing__header__right__button__order__active {
-  background-color: var(--primary);
-  color: white;
+  background-color: var(--color);
+  color: var(--backgroundColor);
 }
 .checkbox {
   position: relative;

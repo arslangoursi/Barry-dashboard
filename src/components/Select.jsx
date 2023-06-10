@@ -17,7 +17,8 @@ export default function Select({ label, id, error, ...props }) {
           {...props}
           theme={(theme) => ({
             ...theme,
-            borderRadius: 0,
+            borderRadius: 10,
+
             colors: {
               ...theme.colors,
               primary75: "#2a5e59",
